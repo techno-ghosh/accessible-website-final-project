@@ -1,0 +1,28 @@
+
+<div class="service-container">
+
+    <div class="row">
+
+        <div class="col-10 h-100">
+
+            <app-paragraph [heading]="paragraphData.paragraphs.services.servicesHeading" [paragraph]="paragraphData.paragraphs.services.serviceContent"></app-paragraph>
+
+        </div>
+
+        <div class="col-2">
+
+            <img src="../../assets/images/Depositphotos_42730373_m-2015.jpg" class="img-fluid rounded w-100 service-img-height" alt="">
+
+        </div>
+
+
+    </div>
+    <div class="row" *ngFor="let item of paragraphData.paragraphs.services.subContent">
+        <div class="col-12">
+            <app-paragraph [heading]="item.heading" [paragraph]="item.content"></app-paragraph>
+        </div>
+        
+    </div>
+
+
+</div>

@@ -1,0 +1,36 @@
+.call-container {
+    max-width: 1400px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rectangle{
+    height:130px;
+    width:120px;
+    margin: 10px;
+    border:1px solid grey;
+}
+
+h6{
+    width:30px;
+    margin-top:-10px;
+    margin-left:5px;
+    background:white;
+}
+
+.w-24 {
+    width: 26%;
+}
+
+fieldset {
+    padding : 20px !important;
+    border : 1px solid grey;
+}
+
+ legend {
+    float: none !important;
+    width: auto !important;
+ }

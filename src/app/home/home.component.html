@@ -1,0 +1,46 @@
+<app-paragraph [heading]="paragraphBox.paragraphs.home_page_welcome.heading" [paragraph]="paragraphBox.paragraphs.home_page_welcome.content"></app-paragraph>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-6">
+      <h2>Meet the Empower Community</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-4" *ngFor="let item of paragraphBox.default.paragraphs.home_page_minor_paragraphs">
+
+      <p>{{ item }}</p> <a href="#">Learn More</a>
+    </div>
+    
+  </div>
+
+  <hr>
+ 
+  <div role="grid" aria-colcount="16">
+    <div role="rowgroup">
+      <div role="row" aria-colindex="2">
+        <span role="columnheader">First Name</span>
+        <span role="columnheader">Last Name</span>
+        <span role="columnheader">Company</span>
+        <span role="columnheader">Address</span>
+      </div>
+    </div>
+    <div role="rowgroup">
+      <div role="row" aria-colindex="2">
+        <span role="gridcell">Fred</span>
+        <span role="gridcell">Jackson</span>
+        <span role="gridcell">Acme, Inc.</span>
+        <span role="gridcell">123 Broad St.</span>
+      </div>
+      <div role="row" aria-colindex="2">
+        <span role="gridcell">Sara</span>
+        <span role="gridcell">James</span>
+        <span role="gridcell">Acme, Inc.</span>
+        <span role="gridcell">123 Broad St.</span>
+      </div>
+      …
+    </div>
+  </div>
+
+</div> 
