@@ -7,15 +7,18 @@
         "home_page_minor_paragraphs" : [
             { 
                     "heading" : "Our Approach",
-                    "content" : "Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective.Learn more"
+                    "content" : "Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective.Learn more",
+                    "link" : "https://www.google.com/search/howsearchworks/our-approach/"
                  },
                  { 
                     "heading" : "Services",
-                    "content" : "Promote accessibility awareness and enhance the user experience. Empathy lab days and workshops.Go beyond WCAG compliance!.Inspirational speakers.Learn more"
+                    "content" : "Promote accessibility awareness and enhance the user experience. Empathy lab days and workshops.Go beyond WCAG compliance!.Inspirational speakers.Learn more",
+                    "link" : "https://www.elevenways.be/en/services"
                  },
                  { 
                     "heading" : "Testimonials",
-                    "content" : "Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your team’s understanding of inclusion.Learn more"
+                    "content" : "Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your team’s understanding of inclusion.Learn more",
+                    "link" : "https://dictionary.cambridge.org/us/dictionary/english/testimonial"
                  }
         ],
         "lightbox":{
