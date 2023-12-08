@@ -8,6 +8,12 @@ import { ParagraphComponent } from './common-components/paragraph/paragraph.comp
 import { ServicesComponent } from './services/services.component';
 import { HomeComponent } from './home/home.component';
 import { CallSchedulerComponent } from './call-scheduler/call-scheduler.component';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import { HomepagedialogComponent } from './common-components/homepagedialog/homepagedialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,11 +23,17 @@ import { CallSchedulerComponent } from './call-scheduler/call-scheduler.componen
     ParagraphComponent,
     ServicesComponent,
     HomeComponent,
-    CallSchedulerComponent
+    CallSchedulerComponent,
+    HomepagedialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    DialogModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

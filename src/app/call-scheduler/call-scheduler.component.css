@@ -34,3 +34,7 @@ fieldset {
     float: none !important;
     width: auto !important;
  }
+
+ .pointer{
+    cursor: pointer;
+ }

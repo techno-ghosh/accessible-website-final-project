@@ -1,65 +1,82 @@
 <div class="call-container">
-  <div class="row">
-      <div class="col-12">
-          <app-paragraph [heading]="paragraphData.paragraphs.call.mainHeading" [paragraph]="paragraphData.paragraphs.call.mainContent"></app-paragraph>
+    <div class="row">
+      <div class="col-12" id="error">
+        <!-- Add appropriate ARIA attributes to enhance accessibility -->
+        <app-paragraph [heading]="paragraphData.paragraphs.call.mainHeading" [paragraph]="paragraphData.paragraphs.call.mainContent"></app-paragraph>
       </div>
+    </div>
   </div>
-</div>
+  
+  <div class="container">
+    <button id="alertMessage" class="btn">
+        <div class="alert alert-danger pointer"  (click)="scroll('target')" id="alertMessage" role="alert" *ngIf="showError">
+            <!-- Provide more specific details in the error message for screen readers -->
+            Please provide more details regarding your event in the 'Tell us about your event' text area input.
+          </div>
+        </button>
+    
+    <div class="alert alert-success" id="success" role="alert" *ngIf="showSuccess">
+      Your form has been submitted successfully. Please wait for a response from our team.
+    </div>
+  
 
-<div class="container">
-  <main>
-      <form>
-          <!-- Ensure labels are associated with form controls using 'for' attribute matching the input 'id' -->
-          <div class="form-group">
-              <label for="businessname">Business name</label>
-              <!-- 'type' should be text if it's not an email. Add 'aria-required' for required fields -->
-              <input type="text" class="form-control" id="businessname" aria-label="Business name" aria-required="true" placeholder="Enter Business name">
+  
+    <main>
+      <form (submit)="formSubmission()" ngNativeValidate>
+        <div class="form-group">
+          <label for="businessname">Business name</label>
+          <input type="text" class="form-control" name="businessname" [(ngModel)]="businessName" id="businessname" aria-label="Business name" aria-required="true" placeholder="Enter Business name" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="phonenumber">Phone number (xxx-xxx-xxxx)</label>
+          <!-- Use type="tel" for phone numbers and add pattern attribute for better input validation -->
+          <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="phoneNumber" id="phonenumber" aria-label="Phone number" placeholder="Enter Phone Number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" id="email" [(ngModel)]="email" aria-describedby="emailHelp" aria-required="true" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+  
+        <fieldset class="form-group">
+          <legend>What would you like to talk about?</legend>
+          <div class="ml-5 scheduler-border">
+            <div class="form-check">
+              <input type="checkbox" name="awareness" class="form-check-input" id="awareness">
+              <label class="form-check-label" for="awareness">Awareness lab jobs and workshops</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="invite" class="form-check-input" id="invite" (change)="toggleEditable($event)">
+              <label class="form-check-label" for="invite">Invite a speaker with disabilities to your event</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="usability" class="form-check-input" id="usability">
+              <label class="form-check-label" for="usability">Usability testing</label>
+            </div>
           </div>
-          <div class="form-group">
-              <label for="phonenumber">Phone number ( xxx-xxx-xxxx )</label>
-              <!-- Correct input type for phone numbers for better on-screen keyboard support on mobile devices -->
-              <input type="tel" class="form-control" id="phonenumber" aria-label="Phone number" placeholder="Enter Phone Number">
+        </fieldset>
+        
+        <div *ngIf="showTextArea">
+            <div class="form-group" >
+                <label for="eventDesc">Tell us about your event</label>
+                <textarea id="eventDesc" cols="30" rows="10" class="form-control" [(ngModel)]="message" aria-label="Event description"></textarea>
+              </div>      
+        </div>
+       
+        <div class="form-group p-3">
+          <div class="form-check form-switch">
+            <!-- Use ARIA roles for switch elements -->
+            <input class="form-check-input" type="checkbox" role="switch" aria-checked="true" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Receive emails about updates and services</label>
           </div>
-          <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" aria-required="true" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          
-          <fieldset class="form-group">
-              <legend>What would you like to talk about?</legend>
-              <div class="ml-5 scheduler-border">
-                  <!-- Ensure checkbox inputs are properly labeled -->
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="awareness">
-                      <label class="form-check-label" for="awareness">Awareness lab jobs and workshops</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="invite" (change)="toggleEditable($event)">
-                      <label class="form-check-label" for="invite">Invite a speaker with disabilities to your event</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="usability">
-                      <label class="form-check-label" for="usability">Usability testing</label>
-                  </div>
-              </div>
-          </fieldset>
-
-          <div class="form-group" *ngIf="showTextArea">
-              <label for="eventDesc">Tell us about your event</label>
-              <textarea id="eventDesc" cols="30" rows="10" class="form-control" aria-label="Event description"></textarea>
-          </div>
-
-          <div class="form-group p-3">
-              <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" aria-checked="true" id="flexSwitchCheckChecked" checked>
-                  <label class="form-check-label" for="flexSwitchCheckChecked">Receive emails about updates and services</label>
-              </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-  </main>
-</div>
-
-<div class="p-5"></div>
+    </main>
+  </div>
+  
+  <div class="p-5"></div>
+  

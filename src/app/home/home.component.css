@@ -1,0 +1,14 @@
+.box-hidden {
+	display: none;
+	position: absolute;
+	top: 19em; left:15em; width:20em; height:5em;
+	border: 2px solid black;
+	padding:0 1em 1em 1em;
+	background-color: #eee;
+	z-index:1002;
+	overflow: auto;
+	}		
+
+.btn-cornflower {
+    background-color: cornflowerblue !important;
+}

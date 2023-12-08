@@ -2,3 +2,7 @@
     background-color: cornflowerblue;
 
 }
+
+.border-bottom {
+    border-bottom: 1px solid black;
+}

@@ -6,14 +6,21 @@
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-6">
-      <h2>Meet the Empower Community</h2> <!-- Ensure proper heading level for document structure -->
+      <button class="btn btn-cornflower p-1 mb-2 " (click)="openDialog()">
+        Meet the Empower Community
+      </button>
+
+
+
+
+      <!-- Ensure proper heading level for document structure -->
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-4 col-4" *ngFor="let item of paragraphBox.default.paragraphs.home_page_minor_paragraphs" role="section">
+    <div class="col-xs-12 col-md-4" *ngFor="let item of paragraphBox.default.paragraphs.home_page_minor_paragraphs" role="section">
       <app-paragraph [heading]="item.heading" [paragraph]="item.content" role="article"></app-paragraph>
-      <a href="{{item.link}}" aria-label="Learn more about {{item.heading}}">Learn More</a>
+      <a href="{{item.link}}" >Learn More</a>
     </div>
   </div>
 

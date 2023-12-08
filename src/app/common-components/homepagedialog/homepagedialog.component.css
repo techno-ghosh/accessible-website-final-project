@@ -1,0 +1,7 @@
+::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: cornflowerblue;
+  }
+
+  mat-button {
+    border: 1px solid black;
+  }
