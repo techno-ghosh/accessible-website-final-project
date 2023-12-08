@@ -1,7 +1,9 @@
 <div class="jumbotron pt-6" role="banner" aria-labelledby="heading">
   <div class="container">
-    <!-- Use an id to link the heading with the aria-labelledby attribute of the parent -->
-    <h1 class="h2" id="heading">{{heading}}</h1> 
-    <p>{{paragraph}}</p>
+    <!-- Ensuring that the heading has a clear id that matches the aria-labelledby attribute -->
+    <h1 class="h2" id="heading">{{heading}}</h1>
+
+    <!-- Adding a role for the paragraph for screen readers to recognize it as a text content -->
+    <p role="text">{{paragraph}}</p>
   </div>
 </div>

@@ -1,18 +1,23 @@
 <nav class="navbar navbar-expand-lg">
+    <!-- Logo with descriptive alt text -->
     <a class="navbar-brand" routerLink="/" aria-label="Home">
         <img class="logo" src="../../../assets/images/empowerabilitylabslogo.png" alt="Empowerability Labs Logo">
     </a>
 
+    <!-- Accessible button with aria-label -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Navbar content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+            <!-- Home link with aria-current for indicating current page -->
             <li class="nav-item active">
                 <a class="nav-link text-light" routerLink="/" aria-current="page">Home</a>
             </li>
+            <!-- Other navigation links -->
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/services">Services</a>
             </li>
