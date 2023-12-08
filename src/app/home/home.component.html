@@ -1,5 +1,5 @@
 <app-paragraph [heading]="paragraphBox.paragraphs.home_page_welcome.heading"
-  [paragraph]="paragraphBox.paragraphs.home_page_welcome.content">
+  [paragraph]="paragraphBox.paragraphs.home_page_welcome.content" role="article">
 </app-paragraph>
 
 <div class="container">
@@ -11,17 +11,18 @@
   </div>
 
   <div class="row">
-    <div class="col-md-4 col-4" *ngFor="let item of paragraphBox.default.paragraphs.home_page_minor_paragraphs">
-
-     <app-paragraph [heading]="item.heading" [paragraph]="item.content"></app-paragraph> <a href="{{item.link}}">Learn More</a>
+    <div class="col-md-4 col-4" *ngFor="let item of paragraphBox.default.paragraphs.home_page_minor_paragraphs" role="section">
+      <app-paragraph [heading]="item.heading" [paragraph]="item.content" role="article"></app-paragraph>
+      <a href="{{item.link}}" aria-label="Learn more about {{item.heading}}">Learn More</a>
     </div>
   </div>
 
   <hr>
 
-  <!-- <div role="grid" aria-colcount="4"> Correct aria-colcount to reflect actual number of columns 
+  <!-- 
+  <div role="grid" aria-colcount="4">
     <div role="rowgroup">
-      <div role="row" aria-rowindex="1"> add aria-rowindex for each row 
+      <div role="row" aria-rowindex="1">
         <span role="columnheader">First Name</span>
         <span role="columnheader">Last Name</span>
         <span role="columnheader">Company</span>
@@ -29,7 +30,6 @@
       </div>
     </div>
     <div role="rowgroup">
-       Each row in the grid
       <div role="row" aria-rowindex="2">
         <span role="gridcell">Fred</span>
         <span role="gridcell">Jackson</span>
@@ -42,8 +42,8 @@
         <span role="gridcell">Acme, Inc.</span>
         <span role="gridcell">123 Broad St.</span>
       </div>
-      
     </div>
-  </div> -->
+  </div>
+  -->
 
 </div>

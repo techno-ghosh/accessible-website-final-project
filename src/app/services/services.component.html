@@ -1,17 +1,17 @@
-<div class="service-container">
+<div class="service-container" role="main">
 
     <div class="row">
 
         <div class="col-10 h-100">
-            <!-- Ensure that the app-paragraph component is accessible, e.g., proper heading levels, readable text, etc. -->
-            <app-paragraph [heading]="paragraphData.paragraphs.services.servicesHeading"
-                [paragraph]="paragraphData.paragraphs.services.serviceContent"></app-paragraph>
+            <!-- Use proper heading levels and ensure text contrasts and font sizes are readable -->
+            <app-paragraph role="article" [heading]="paragraphData.paragraphs.services.servicesHeading"
+                [paragraph]="paragraphData.paragraphs.services.serviceContent" aria-labelledby="servicesHeading"></app-paragraph>
         </div>
 
         <div class="col-2">
             <!-- Add a meaningful alt text to the image for screen readers -->
             <img src="../../assets/images/Depositphotos_42730373_m-2015.jpg"
-                class="img-fluid rounded w-100 service-img-height" alt="Descriptive text about the image">
+                class="img-fluid rounded w-100 service-img-height" alt="Detailed description of the image, including its relevance to the content">
         </div>
 
     </div>
@@ -19,7 +19,7 @@
     <div class="row" *ngFor="let item of paragraphData.paragraphs.services.subContent">
         <div class="col-12">
             <!-- Ensure that the app-paragraph component in this loop is also accessible -->
-            <app-paragraph [heading]="item.heading" [paragraph]="item.content"></app-paragraph>
+            <app-paragraph role="article" [heading]="item.heading" [paragraph]="item.content" aria-labelledby="itemHeading"></app-paragraph>
         </div>
     </div>
 
