@@ -9,5 +9,18 @@ import * as json from '../../assets/JSON/data.json'
 export class CallSchedulerComponent {
 
   public paragraphData: any = json;
+  public showTextArea: boolean = false;
+
+
+  toggleEditable(event: any) {
+    if ( event.target.checked ) {
+        this.showTextArea = true;
+   } else {
+    this.showTextArea = false;
+   }
+}
+
+
+
 
 }
