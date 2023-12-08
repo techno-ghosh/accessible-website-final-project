@@ -2,31 +2,47 @@
     "paragraphs" : {
         "home_page_welcome" : {
             "heading" : "Welcome to Empower Ability Labs!",
-            "content" : "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.Donec sed odio dui. "
+            "content" : "Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to foster understanding and promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? "
         },
         "home_page_minor_paragraphs" : [
-            "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. ",
-            "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. ",
-            "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. "
-        ],
-        "services" : {
-            "servicesHeading" :  "Service Page heading",
-            "serviceContent" : "Service page content",
-            "subContent" : [
-                { 
-                    "heading" : "Sub Heading 1",
-                    "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            { 
+                    "heading" : "Our Approach",
+                    "content" : "Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective.Learn more"
                  },
                  { 
-                    "heading" : "Sub Heading 2",
-                    "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    "heading" : "Services",
+                    "content" : "Promote accessibility awareness and enhance the user experience. Empathy lab days and workshops.Go beyond WCAG compliance!.Inspirational speakers.Learn more"
+                 },
+                 { 
+                    "heading" : "Testimonials",
+                    "content" : "Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your team’s understanding of inclusion.Learn more"
+                 }
+        ],
+        "lightbox":{
+            "heading" : "Meet the Empower Community! Lightbox content",
+            "content" : "Community Steering Committee. We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:McGill University,Walmart.ca,Apple.ca,Google.ca,Government of Canada."
+        },
+        "services" : {
+            "servicesHeading" :  "Services",
+            "serviceContent" : "Dedicated space or programs designed to cultivate empathy and understanding among individuals towards the challenges faced by people with disabilities in using technology and interacting with various environments.",
+            "subContent" : [
+                { 
+                    "heading" : "Empathy Lab days and workshops",
+                    "content" : "The lab days and workshops typically provide hands-on experiences, simulations, and interactions with assistive technologies, tools, and scenarios that replicate the obstacles individuals with disabilities encounter daily."
+                 },
+                 { 
+                    "heading" : "Inspirational speakers",
+                    "content" : "Invite a speaker with disabilities to take share their unique journey. This captivating addition to your upcoming event will offer insights that resonate, inspire, educate, and enrich your team collective understanding of inclusion."
+                 },
+                 { 
+                    "heading" : "Usability testing",
+                    "content" : "Go beyond WCAG! Involve individuals with disabilities in usability testing to gather valuable insights for refining product strategy and identifying accessibility concerns at an early stage when solutions are more feasible and cost-effective. You have access to a diverse community of people with disabilities, who use various assistive technologies. With technical expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA."
                  }
             ]
         },
         "call" : {
-            "mainHeading" : "Main Heading",
-            "mainContent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            "mainHeading" : "Schedule a call",
+            "mainContent" : "At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences. Fill out the form below and we'll get back to you as soon as we can to schedule a call with our sales team!"
         } 
     }
 }
-
